@@ -1,0 +1,67 @@
+  var REAL_DOMAIN = document.location.host;
+
+  var url_movieimage = "http://image.nmv.naver.net";
+  var url_movieimage2 = "http://image.nmv.naver.net";
+  var movieUploadUrl = "http://uploader.nmv.naver.com";
+  var movieServiceUrl = "http://serviceapi.nmv.naver.com";
+
+  var url_movieimage= "http://image.nmv.naver.net";
+  var url_movieimage_old = "http://thumb.media.naver.com";
+
+  var url_attachmpeg = "mms://stream.media.naver.com";
+  var url_mpegthumbnail = "http://thumb.media.naver.com";
+
+  var url_imageupload = "http://upload.kin.naver.com";
+  var url_imageserver = "http://kinimage.naver.net";
+  var url_attach = "http://kinimage.naver.net";
+
+  var url_uploadmap = "http://mashup.map.naver.com";
+  var url_viewmap = "http://mashup.map.naver.com";
+
+  var movie_service_id = "4";
+
+  var MOVIE_UPLOAD_URL = "http://uploader.nmv.naver.com";
+  var MOVIE_SERVICE_URL = "http://serviceapi.nmv.naver.com";
+
+  var MOVIE_IMAGE_URL= "http://image.nmv.naver.net";
+  var MOVIE_OLD_IMAGE_URL = "http://thumb.media.naver.com";
+
+  var MPEG_ATTACH_URL = "mms://stream.media.naver.com";
+  var MPEG_THUMBNAIL_URL = "http://thumb.media.naver.com";
+
+  var IMAGE_UPLOAD_URL = "http://upload.kin.naver.com";
+  var IMAGE_SERVICE_URL = "http://kinimage.naver.net";
+  var ATTACH_URL = "http://kinimage.naver.net";
+
+  var MAP_UPLOAD_URL = "http://mashup.map.naver.com";
+  var MAP_VIEW_URL = "http://mashup.map.naver.com";
+
+  var MOVIE_SERVICE_ID = "4";
+
+  var loginId = login_user_id = "darkzin";
+
+/**
+ * 네임카드 카페 <-> 유저 전환
+ * @param {String} command   : user, cafe
+ */
+ function select_namecard(command) {
+	if (command == 'closeId') {
+		$("kin_namecard_user").style.display = 'block';
+		$("kin_namecard_cafe").style.display = 'none';
+		$("choose_namcard1").checked = true;
+		$("choose_namcard2").checked = false;
+		$("choose_namcard2").disabled = true;
+	} else if(command == 'openId') {
+		$("choose_namcard2").disabled = false;
+	} else if(command == 'cafe') {
+		$("kin_namecard_user").style.display = 'none';
+		$("kin_namecard_cafe").style.display = 'block';
+		$("choose_namcard2").checked = true;
+		$("choose_namcard1").checked = false;
+	} else {
+		$("kin_namecard_user").style.display = 'block';
+		$("kin_namecard_cafe").style.display = 'none';
+		$("choose_namcard2").checked = false;
+		$("choose_namcard1").checked = true;		
+	}
+}
